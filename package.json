@@ -1,0 +1,26 @@
+{
+  "name": "evolux.dyncomponents",
+  "version": "1.0.0",
+  "description": "dynamic managing components and services inspired by OSGi",
+  "main": "index.js",
+  "scripts": {
+    "gendoc": "./node_modules/.bin/esdoc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thoregon/evolux.dyncomponents.git"
+  },
+  "keywords": [],
+  "author": "Bernhard Lukassen <bl@bernhard-lukassen.com> (http://www.bernhard-lukassen.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thoregon/evolux.dyncomponents/issues"
+  },
+  "homepage": "https://github.com/Thoregon/evolux.dyncomponents#readme",
+  "devDependencies": {
+    "esdoc": "^1.1.0",
+    "esdoc-node": "^1.0.4",
+    "esdoc-standard-plugin": "^1.0.0"
+  }
+}
