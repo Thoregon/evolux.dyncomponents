@@ -2,7 +2,8 @@
   "name": "evolux.dyncomponents",
   "version": "1.0.0",
   "description": "dynamic managing components and services inspired by OSGi",
-  "main": "index.js",
+  "main": "index.mjs",
+  "type": "module",
   "scripts": {
     "gendoc": "./node_modules/.bin/esdoc",
     "test": "jest"
