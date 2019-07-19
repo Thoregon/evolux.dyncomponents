@@ -5,11 +5,12 @@ Does the same as the Loader, but as precompiled scripts for the browser - none i
 to reduce data transfer and startp time. 
 
 Assembles a script which does the dynamic loading in the browser. 
-The script will be loaded from a boot script, which detects the clients properties 
-and helps to build the right loader script. 
-This boot script will be referenced directly in the HTML.  
-Caching of precompiled scripts is done, client get ist own signature. Client boot script will always check if 
-relevant settings or information has been changed and asks the server for a replacement.
+Uses [rollup](Assembles a script which does the dynamic loading in the browser.
+Especially for old style CommonJS modules, which can't be loaded in the browser 
+a packaging with transpilation is necessary.
+Caching of precompiled scripts is done, client get ist own signature with an ETag. 
+Client boot script will always check if relevant settings or information has been changed and asks the 
+server for a replacement.
 
 The dynamic browser loader is also reponsible for hot reloading during development
 and also for updates in production.
@@ -20,5 +21,3 @@ these scripts will be loaded with the Module class.
 Check browser Memory:
 
     navigator.storage.estimate().then(result => console.log(result))
-
-

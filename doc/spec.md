@@ -18,6 +18,8 @@ Works together with 'dynlayers'.
 discovery of installed components
 explore comonent interface and purpose (what kind of component)
 
+Autoinstaller for components in a sepcified directory, multiple autoinstellers possible
+
 Registry for interfaces
 Interface belongs to categories (at least one)
 
