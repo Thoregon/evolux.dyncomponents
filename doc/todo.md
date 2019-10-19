@@ -1,6 +1,13 @@
 ToDo
 ====
 
+- introduce a closed context for each installed component
+    - --> nodeJS: https://www.heise.de/developer/artikel/JavaScript-Code-dynamisch-zur-Laufzeit-laden-und-ausfuehren-4536862.html?seite=3
+    - --> browser: https://github.com/dfkaye/vm-shim, https://github.com/commenthol/safer-eval#readme
+    - no access to global variables except 'universe'
+    - a narrow, specialized API to move components in the browser, as well as an API for lifecycle and other important browser events
+    - enables 'simulating' UI components in headless peers
+
 - Component Listener for URL's better URI's to watch, find and load components from wherever, also IPFS
     - must be secured with signatures
     - implement Source, check signatures, copy to local cache and resolve
@@ -8,6 +15,8 @@ ToDo
 - make the dyncomponents itself updatable; enable rollback
 - enable testing: blue/green system, canary
 
+- browser loader plugin for components
+    - reliant resolver (remote for component resolver)
 - rudimentary pub/sub for boot, then exchange it with the evolux.pubsub component
     - controller requires install of evolux.pubsub, listens on itself when it is installed
 

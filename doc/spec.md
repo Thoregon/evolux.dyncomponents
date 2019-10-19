@@ -75,18 +75,20 @@ A descriptor for the component may be created. Otherwise the componentloader tak
 
 The descriptor can specify the following settings and behavior:
 
-    export default ComponentDescriptor({
-        id:             'unique_module_id',
-        category:       'category_to_be_registered_in',
-        displayName:    'name_to_be_displayed',     // can be omitted, then the id will be used
-        href:           'url_or_path_to_module',
-        dependencies:   [],
-        optional:       [],
-        oninstall:      (module) => { ... },
-        onstart:        (module) => { ... },
-        onstop:         (module) => { ... },
-        onuninstall:    (module) => { ... }
-    });
+```js
+export default ComponentDescriptor({
+    id:             'unique_module_id',
+    category:       'category_to_be_registered_in',
+    displayName:    'name_to_be_displayed',     // can be omitted, then the id will be used
+    href:           'url_or_path_to_module',
+    dependencies:   [],
+    optional:       [],
+    oninstall:      (module) => { ... },
+    onstart:        (module) => { ... },
+    onstop:         (module) => { ... },
+    onuninstall:    (module) => { ... }
+});
+```
     
 ##Name Convention for Autoloader
 

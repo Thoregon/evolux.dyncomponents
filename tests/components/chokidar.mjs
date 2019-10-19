@@ -1,4 +1,4 @@
-import ComponentDescriptor      from '../../lib/component/componentdescriptor.mjs';
+import ComponentDescriptor     from '../../lib/component/componentcontext.mjs';
 
 /**
  *
