@@ -8,6 +8,8 @@ ToDo
     - a narrow, specialized API to move components in the browser, as well as an API for lifecycle and other important browser events
     - enables 'simulating' UI components in headless peers
 
+- Introduce Loader/Component pairs like in java --> coordinate the loaders from universe
+
 - Component Listener for URL's better URI's to watch, find and load components from wherever, also IPFS
     - must be secured with signatures
     - implement Source, check signatures, copy to local cache and resolve
