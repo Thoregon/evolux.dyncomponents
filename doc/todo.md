@@ -2,7 +2,7 @@ ToDo
 ====
 
 - introduce a closed context for each installed component
-    - --> nodeJS: https://www.heise.de/developer/artikel/JavaScript-Code-dynamisch-zur-Laufzeit-laden-und-ausfuehren-4536862.html?seite=3
+    - --> nodeJS: require('vm2'); https://www.heise.de/developer/artikel/JavaScript-Code-dynamisch-zur-Laufzeit-laden-und-ausfuehren-4536862.html?seite=3
     - --> browser: https://github.com/dfkaye/vm-shim, https://github.com/commenthol/safer-eval#readme
     - no access to global variables except 'universe'
     - a narrow, specialized API to move components in the browser, as well as an API for lifecycle and other important browser events
