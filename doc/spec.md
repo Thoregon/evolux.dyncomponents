@@ -52,20 +52,31 @@ are installed at the sovereign side and are not related to infrastructure.
 The component loaders rely on the underlying loaders from the universe. Means the bootloader in a 'nodeJS' souvereign 
 environment, and the browserloader in a reliant peer.
 
-Autoinstaller (LocationWatcher) is available for components in a sepcified directory, multiple autoinstallers possible
+Autoinstaller 
+    - LocationWatcher: is available for components in a sepcified directory, multiple autoinstallers possible
+    - name a fearure -> collect all neccessary components 
+
+Registry manages for components also
+    - tags
+    - features
+    - interfaces
+    - facades
 
 Registry for interfaces
 Interface belongs to categories (at least one)
 
-Meshups for 
+##Meshups for 
 - Services
 - Userinterface
 
-Components can be comprosed of a whole bunch of other components to form an App, a Bounded Context, or a Service. 
-It is even possible to reduce/extend functinality of a component, depending if other components are installed or not. 
+build whole facades out of interfaces. Define a FacadeDescriptor requiring components, by name (not preferred), by tag 
+or api. Specify the mesh how they work together, include adapters for api translation between components if necessary.
+
+Components can be comprised of a whole bunch of other components to form an App, a Bounded Context, or a Service. 
+It is even possible to reduce/extend functionality of a component, depending if other components are installed or not. 
 This is also dynamic, the component will be informed if the missing component get installed or uninstalled.
 
-Plugins for automatic loading/unloading.
+##Plugins for automatic loading/unloading.
 An installend component is always a tuple of a 'ComponentLoader' and a 'Component'. This is to identify from where the 
 component can from. 
 
@@ -73,6 +84,11 @@ There exists an standardized component wrapper for components which are not 'Ins
 as a component. The dynamic dependency injection is available also if the component is not an 'Installable'.
 A descriptor for the component may be created. Otherwise the componentloader takes avialable information from 'package.json':
 
+#extension and enhancements
+- extensions: subcomponents (subclasses) 
+- enhancement: additional functions (on the same component/class)
+
+##Descriptors
 The descriptor can specify the following settings and behavior:
 
 ```js
@@ -83,6 +99,8 @@ export default ComponentDescriptor({
     href:           'url_or_path_to_module',
     dependencies:   [],
     optional:       [],
+    tags:           [],
+    apis:           [],
     oninstall:      (module) => { ... },
     onstart:        (module) => { ... },
     onstop:         (module) => { ... },
