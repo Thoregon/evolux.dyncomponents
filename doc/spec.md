@@ -101,13 +101,57 @@ export default ComponentDescriptor({
     optional:       [],
     tags:           [],
     apis:           [],
-    oninstall:      (module) => { ... },
-    onstart:        (module) => { ... },
-    onstop:         (module) => { ... },
-    onuninstall:    (module) => { ... }
+    oninstall:      (module) => { },
+    onuninstall:    (module) => { }
 });
 ```
-    
+
+with the `oninstall` and `onuninstall` hooks action can be applied. Another possibility is to implement a 
+service component. 
+
+##ServiceComponents
+When the module exports an object named `service` and the service implements the following methods, it will be treated a s service:
+
+```js
+    export const service = {
+        install() { },
+        uninstall() { },
+        resolve() { },
+        start() { },
+        stop() { },
+        update() { }
+    }
+```
+
+Methods will be called in the right order.    
+
+##Component Observer/Feature Detection
+Sometimes a component can make features available if other components are installed. Therefore the controller
+allows listening on component events. The events are delivered in correct order, even if the observer is added 
+later. Means an observer will be notified of an installed component also when the component was installed before.
+Should be used for downward compatibility and extensibility. Users can be notified that there are more features
+available when he updates or installs other component(s).
+
+Observer
+`what` can be
+- id of the component
+- a tag 
+- a function selecting the component 
+```js
+    const components    = universe.evolux.components;
+    components.observer( what, { 
+        installed:      (descriptor) => {},
+        started:        (descriptor) => {},
+        stopped:        (descriptor) => {},
+        uninstalled:    (descriptor) => {},
+    });
+```
+The handler functions are called reliably, regardless if the observer is registered before or after the desired event.
+
+There is also a convention based helper 
+
+Stop observing with `forget(observer)`.
+
 ##Name Convention for Autoloader
 
 Defined directory structure:
@@ -139,22 +183,4 @@ Adapter, a Polyfilor or a Shim.
 
 ###Schema
 Supports Schema, but does not require it
-
-###Component/Feature Detection
-There is an event like API for component and feature detection. Use it when it gets available, due to an install or update.
-Should be used for downward compatibility and extensibility. Users can be notified that there are more features
-available when he updates or installs other component(s).
-
-The API for component detection. The component can be addressed by an id, a tag or a filter function: 
-
-    components.observe(idTagOrFilter, {
-        installed:      (descriptor) => {},
-        started:        (descriptor) => {},
-        stopped:        (descriptor) => {},
-        uninstalled:    (descriptor) => {},
-    });
-
-The handler functions are called reliably, regardless if the observer is registered before or after the desired event.
-
-There is also a convention based helper 
 
