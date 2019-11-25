@@ -140,8 +140,21 @@ Adapter, a Polyfilor or a Shim.
 ###Schema
 Supports Schema, but does not require it
 
-###Feature Detection
-There is an event like API for feature detection. Use it when it gets available, due to an install or update.
-Shuld be used for downward compatibility and extensability. Users can be notified that there are more featues
-avialable when he updates or isntalls other component(s).
+###Component/Feature Detection
+There is an event like API for component and feature detection. Use it when it gets available, due to an install or update.
+Should be used for downward compatibility and extensibility. Users can be notified that there are more features
+available when he updates or installs other component(s).
+
+The API for component detection. The component can be addressed by an id, a tag or a filter function: 
+
+    components.observe(idTagOrFilter, {
+        installed:      (descriptor) => {},
+        started:        (descriptor) => {},
+        stopped:        (descriptor) => {},
+        uninstalled:    (descriptor) => {},
+    });
+
+The handler functions are called reliably, regardless if the observer is registered before or after the desired event.
+
+There is also a convention based helper 
 
