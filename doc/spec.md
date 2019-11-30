@@ -152,6 +152,9 @@ There is also a convention based helper
 
 Stop observing with `forget(observer)`.
 
+##Dependency Injection
+Dynamically inject and replace dependent components
+
 ##Name Convention for Autoloader
 
 Defined directory structure:
