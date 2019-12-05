@@ -1,6 +1,12 @@
 ToDo
 ====
 
+- separate componentloaders as segments (subcomponents) for module kinds
+    - bower
+    - node
+    - script
+    - introduce .tha ... thoregon archive
+
 - introduce a closed context for each installed component
     - --> nodeJS: require('vm2'); https://www.heise.de/developer/artikel/JavaScript-Code-dynamisch-zur-Laufzeit-laden-und-ausfuehren-4536862.html?seite=3
     - --> browser: https://github.com/dfkaye/vm-shim, https://github.com/commenthol/safer-eval#readme
