@@ -155,6 +155,11 @@ Stop observing with `forget(observer)`.
 ##Dependency Injection
 Dynamically inject and replace dependent components
 
+components can also be imported by:
+```js
+import Component from '/universe/components/Component';
+```
+ 
 ##Name Convention for Autoloader
 
 Defined directory structure:

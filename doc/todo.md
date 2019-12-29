@@ -16,6 +16,9 @@ ToDo
 
 - Introduce Loader/Component pairs like in java --> coordinate the loaders from universe
 
+- extend the bootloader and browser loader to allow ES6 'import' on installed components
+    --> dynamicInstantiate
+     
 - Component Listener for URL's better URI's to watch, find and load components from wherever, also IPFS
     - must be secured with signatures
     - implement Source, check signatures, copy to local cache and resolve
