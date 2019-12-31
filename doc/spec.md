@@ -100,14 +100,9 @@ export default ComponentDescriptor({
     dependencies:   [],
     optional:       [],
     tags:           [],
-    apis:           [],
-    oninstall:      (module) => { },
-    onuninstall:    (module) => { }
+    apis:           []
 });
 ```
-
-with the `oninstall` and `onuninstall` hooks action can be applied. Another possibility is to implement a 
-service component. 
 
 ##ServiceComponents
 When the module exports an object named `service` and the service implements the following methods, it will be treated a s service:
