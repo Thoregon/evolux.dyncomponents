@@ -1,6 +1,11 @@
 ToDo
 ====
 
+- 'simulate' install of the dyncomponents itself after started
+    - replay events
+    - 'simulate' resolve (dependencies)
+    - simulate install of Universe?
+
 - separate componentloaders as segments (subcomponents) for module kinds
     - bower
     - node
