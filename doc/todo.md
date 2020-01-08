@@ -1,6 +1,8 @@
 ToDo
 ====
 
+- Comonent(Location)Listener for 'gun'
+
 - 'simulate' install of the dyncomponents itself after started
     - replay events
     - 'simulate' resolve (dependencies)
