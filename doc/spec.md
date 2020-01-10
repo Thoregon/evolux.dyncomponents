@@ -133,7 +133,7 @@ Observer
 - a tag 
 - a function selecting the component 
 ```js
-    const components    = universe.evolux.components;
+    const components    = universe.services.components;
     components.observer( what, { 
         installed:      (descriptor) => {},
         started:        (descriptor) => {},
