@@ -3,6 +3,9 @@ ToDo
 
 - Comonent(Location)Listener for 'gun'
 
+- wrap components with revokable proxies to avoid reuse after uninstall
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/revocable
+
 - 'simulate' install of the dyncomponents itself after started
     - replay events
     - 'simulate' resolve (dependencies)
