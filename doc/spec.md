@@ -104,6 +104,8 @@ export default ComponentDescriptor({
 });
 ```
 
+A component descriptor must not contain functions!
+
 ##ServiceComponents
 When the module exports an object named `service` and the service implements the following methods, it will be treated a s service:
 
@@ -134,7 +136,7 @@ Observer
 - a function selecting the component 
 ```js
     const components    = universe.services.components;
-    components.observer( what, { 
+    components.observe( what, { 
         installed:      (descriptor) => {},
         started:        (descriptor) => {},
         stopped:        (descriptor) => {},

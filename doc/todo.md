@@ -3,14 +3,19 @@ ToDo
 
 - Comonent(Location)Listener for 'gun'
 
-- wrap components with revokable proxies to avoid reuse after uninstall
+- wrap components with revocable proxies to avoid reuse after uninstall
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 
 - 'simulate' install of the dyncomponents itself after started
     - replay events
     - 'simulate' resolve (dependencies)
     - simulate install of Universe?
-
+- All System Components installed during boot should be visible in 'matter.components'
+    - don't install again
+    - virtual content? (not stored in gun but accessible via the proxy)
+- Component updates
+    - System Components? 
+    
 - separate componentloaders as segments (subcomponents) for module kinds
     - bower
     - node
@@ -25,9 +30,6 @@ ToDo
     - enables 'simulating' UI components in headless peers
 
 - Introduce Loader/Component pairs like in java --> coordinate the loaders from universe
-
-- extend the bootloader and browser loader to allow ES6 'import' on installed components
-    --> dynamicInstantiate
      
 - Component Listener for URL's better URI's to watch, find and load components from wherever, also IPFS
     - must be secured with signatures
@@ -50,3 +52,10 @@ ToDo
     - install/uninstall components
     - start/stop components
     - list components (with status)
+
+
+****************************************************
+## Done
+
+- extend the bootloader and browser loader to allow ES6 'import' on installed components
+    --> dynamicInstantiate
