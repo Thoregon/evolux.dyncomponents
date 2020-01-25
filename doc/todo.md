@@ -1,7 +1,11 @@
 ToDo
 ====
 
-- Comonent(Location)Listener for 'gun'
+- Component(Location)Listener for 'gun'
+
+- Secure Components with signatures
+    - use gun SEA
+    - Signature in ComponentDescriptor
 
 - wrap components with revocable proxies to avoid reuse after uninstall
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/revocable
@@ -34,7 +38,9 @@ ToDo
 - Component Listener for URL's better URI's to watch, find and load components from wherever, also IPFS
     - must be secured with signatures
     - implement Source, check signatures, copy to local cache and resolve
-- install components used for boot with 'import' as components; 
+- install components used for boot with 'import' as components
+    - implement dependencies
+    - resolve cycle references
 - make the dyncomponents itself updatable; enable rollback
 - enable testing: blue/green system, canary
 
