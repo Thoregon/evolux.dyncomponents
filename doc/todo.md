@@ -2,6 +2,7 @@ ToDo
 ====
 
 - Component(Location)Listener for 'gun'
+    - Responsibilities to install different components
 
 - Secure Components with signatures
     - use gun SEA
