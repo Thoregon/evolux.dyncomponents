@@ -157,8 +157,9 @@ components can also be imported by:
 import Component from '/universe/components/Component';
 ```
  
-##Name Convention for Autoloader
+## Name Convention for Autoloader
 
+(Sub)components can be defined for each thoregon installation as well as for every component
 Defined directory structure:
 
     ./components
