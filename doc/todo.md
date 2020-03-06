@@ -3,6 +3,18 @@ ToDo
 
 - Component(Location)Listener for 'gun'
     - Responsibilities to install different components
+    - Persistent component repository e.g. to build whole apps or extend apps
+
+- Simple way to define composite components
+    - Extended Component Descriptor
+        - collection of (dependent) components
+        - optional components
+            - user selects
+            - feature only available when component is or gets installed
+    - whole apps
+    - app extensions 
+
+- add convention/configuration for dependent/optional components/features
 
 - Secure Components with signatures
     - use gun SEA

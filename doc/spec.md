@@ -33,7 +33,7 @@ The consumers get informed. (update event)
 Works together with 'dynlayers'.
 
 
-##Loaders
+## Loaders
 Supplies a specialized loader, which plugs into loaderhierarchy from bootloader.
 Component access is available for 'import' but provides a dynamic dependency injection API. 
 Works with extended 'Futures' which also supports 'replaced' event.
@@ -65,7 +65,7 @@ Registry manages for components also
 Registry for interfaces
 Interface belongs to categories (at least one)
 
-##Meshups for 
+## Meshups for 
 - Services
 - Userinterface
 
@@ -76,7 +76,7 @@ Components can be comprised of a whole bunch of other components to form an App,
 It is even possible to reduce/extend functionality of a component, depending if other components are installed or not. 
 This is also dynamic, the component will be informed if the missing component get installed or uninstalled.
 
-##Plugins for automatic loading/unloading.
+## Plugins for automatic loading/unloading.
 An installend component is always a tuple of a 'ComponentLoader' and a 'Component'. This is to identify from where the 
 component can from. 
 
@@ -84,11 +84,14 @@ There exists an standardized component wrapper for components which are not 'Ins
 as a component. The dynamic dependency injection is available also if the component is not an 'Installable'.
 A descriptor for the component may be created. Otherwise the componentloader takes avialable information from 'package.json':
 
-#extension and enhancements
+# extension and enhancements
 - extensions: subcomponents (subclasses) 
 - enhancement: additional functions (on the same component/class)
 
-##Descriptors
+## Descriptors
+A descriptor file has the extension '.tcd' (thoregon component descriptor). If it is located in the 'components'
+dir structure, it will be installed automatically. todo: add file listener. 
+
 The descriptor can specify the following settings and behavior:
 
 ```js
@@ -106,7 +109,7 @@ export default ComponentDescriptor({
 
 A component descriptor must not contain functions!
 
-##ServiceComponents
+## ServiceComponents
 When the module exports an object named `service` and the service implements the following methods, it will be treated a s service:
 
 ```js
