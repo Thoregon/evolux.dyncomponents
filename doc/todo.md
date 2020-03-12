@@ -1,6 +1,8 @@
 ToDo
 ====
 
+- component mirror -> namespaces for components & subcomponents
+
 - Component(Location)Listener for 'gun'
     - Responsibilities to install different components
     - Persistent component repository e.g. to build whole apps or extend apps
