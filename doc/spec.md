@@ -162,16 +162,20 @@ import Component from '/universe/components/Component';
  
 ## Name Convention for Autoloader
 
+A component can be directly available as directory with its content, or as component descriptor
+with the extension '.tcd' (thoregon component descriptor).
+ 
 (Sub)components can be defined for each thoregon installation as well as for every component
 Defined directory structure:
 
-    ./components
+    ./components                ... compoents for all nodes
         sovereign
             headless
             headed
         reliant
             lite
             rich 
+        ui                      ... components for nodes with a UI (sovereign headed and reliat by default). Can be enforced by setting 'universe.UI = true'
 
 All components (and descriptors) in the base directory 'components' will be installed in all nodes
 
