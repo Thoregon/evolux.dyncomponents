@@ -20,9 +20,6 @@
   },
   "homepage": "https://github.com/Thoregon/evolux.dyncomponents#readme",
   "devDependencies": {
-    "esdoc": "^1.1.0",
-    "esdoc-node": "^1.0.4",
-    "esdoc-standard-plugin": "^1.0.0"
   },
   "dependencies": {
     "chokidar": "^3.0.2",
