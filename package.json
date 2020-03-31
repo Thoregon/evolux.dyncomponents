@@ -19,8 +19,7 @@
     "url": "https://github.com/Thoregon/evolux.dyncomponents/issues"
   },
   "homepage": "https://github.com/Thoregon/evolux.dyncomponents#readme",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "chokidar": "^3.0.2",
     "cuid": "^2.1.6",
