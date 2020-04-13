@@ -18,8 +18,10 @@ ToDo
 
 - add convention/configuration for dependent/optional components/features
 
+- introduce component controller/loader plugins for checks 
+
 - Secure Components with signatures
-    - use gun SEA
+    - use everblack (gun SEA)
     - Signature in ComponentDescriptor
 
 - wrap components with revocable proxies to avoid reuse after uninstall
