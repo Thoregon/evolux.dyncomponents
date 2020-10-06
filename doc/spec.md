@@ -175,7 +175,7 @@ Defined directory structure:
         reliant
             lite
             rich 
-        ui                      ... components for nodes with a UI (sovereign headed and reliat by default). Can be enforced by setting 'universe.UI = true'
+        ui                      ... components for nodes with a UI (sovereign headed and reliat by default).
 
 All components (and descriptors) in the base directory 'components' will be installed in all nodes
 
