@@ -1,6 +1,16 @@
 ToDo
 ====
 
+- plugins for
+    - browserloader/universe-service
+        -> https://serviceworke.rs/fetching.html
+        -> https://serviceworke.rs/json-cache.html              get a JSON to load the packages
+        -> https://serviceworke.rs/cache-from-zip.html          load all base system components in one zip
+        -> https://serviceworke.rs/virtual-server.html          handle virtual resources as well as IPFS and blackchain resources
+        -> https://serviceworke.rs/request-deferrer.html        defer request if offline, provide a useful replacement 
+    - bootloader
+        
+
 - component mirror -> namespaces for components & subcomponents
 
 - Component(Location)Listener for 'gun'
