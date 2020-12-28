@@ -92,22 +92,7 @@ A descriptor for the component may be created. Otherwise the componentloader tak
 A descriptor file has the extension '.tcd' (thoregon component descriptor). If it is located in the 'components'
 dir structure, it will be installed automatically. todo: add file listener. 
 
-The descriptor can specify the following settings and behavior:
-
-```js
-export default ComponentDescriptor({
-    id:             'unique_module_id',
-    category:       'category_to_be_registered_in',
-    displayName:    'name_to_be_displayed',     // can be omitted, then the id will be used
-    href:           'url_or_path_to_module',
-    dependencies:   [],
-    optional:       [],
-    tags:           [],
-    apis:           []
-});
-```
-
-A component descriptor must not contain functions!
+Detials see [Component Descriptors](./components.md)
 
 ## ServiceComponents
 When the module exports an object named `service` and the service implements the following methods, it will be treated a s service:
