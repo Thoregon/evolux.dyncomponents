@@ -21,8 +21,6 @@
   "homepage": "https://github.com/Thoregon/evolux.dyncomponents#readme",
   "devDependencies": {},
   "dependencies": {
-    "chokidar": "^3.0.2",
-    "cuid": "^2.1.6",
     "javascript-state-machine": "^3.1.0"
   }
 }

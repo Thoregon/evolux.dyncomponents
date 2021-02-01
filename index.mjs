@@ -6,7 +6,7 @@
 
 import Controller                           from "./lib/controller/controller.mjs";
 
-export { default as LocationWatcher }       from './lib/controller/locationwatcher.mjs';
+// export { default as LocationWatcher }       from './lib/controller/locationwatcher.mjs';
 export { default as ComponentsWatcher }     from './lib/controller/componentswatcher.mjs';
 export { default as ComponentDescriptor }   from './lib/component/componentcontext.mjs';
 
