@@ -7,6 +7,23 @@ ToDo
     - Versions
     - Target (browser: which, version; node: version) 
 
+- Facades 
+    - API for cmponent
+    - remote Proxy providing the API to the component
+    - UI compoments 
+        - access to document
+        - 
+
+- Firewall/Malware
+    - blacklist for address/name
+    - size limits
+    - plugin API for malware scanners
+    - run in separate context 
+        -> vm2 (node), save eval (browser), 
+        - Workers w/o shared memory!
+            -> SharedWorker - https://developer.mozilla.org/de/docs/Web/API/SharedWorker
+            -> WorkerThread - https://nodejs.org/api/worker_threads.html, https://www.heise.de/developer/artikel/Features-von-uebermorgen-Worker-Threads-in-Node-js-4354189.html
+
 - plugins for
     - browserloader/universe-service
         -> https://serviceworke.rs/fetching.html
