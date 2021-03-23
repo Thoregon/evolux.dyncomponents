@@ -1,6 +1,21 @@
 ToDo
 ====
 
+- distinguish between
+    - component     ... runs in own sandbox context
+        - always needs a service 
+        - 'component.mjs' in root directory
+            - components descriptor
+            - service object with 
+        - specify interface, available as proxy for other components
+    - library       ... imported within components to be used
+        - exports from 'index.mjs'
+    - don't mix lib and component 
+
+- enable for DI (Dependency Injection)
+    -> see https://nestjs.com/
+- enable decorators
+
 - Refactor for component repositories in 'matter'
     - Components
     - Dependencies
@@ -18,11 +33,31 @@ ToDo
     - blacklist for address/name
     - size limits
     - plugin API for malware scanners
-    - run in separate context 
-        -> vm2 (node), save eval (browser), 
-        - Workers w/o shared memory!
+    - introduce a closed context for each installed component, run in separate context
+        - --> nodeJS: require('vm2'); https://www.heise.de/developer/artikel/JavaScript-Code-dynamisch-zur-Laufzeit-laden-und-ausfuehren-4536862.html?seite=3
+        - --> browser
+            - !! https://github.com/substack/vm-browserify  https://github.com/browserify/vm-browserify/blob/master/index.js
+            - jailed (iframe sandbox) https://github.com/asvd/jailed
+            - additional jail inside iframe? -> don't think so, globals can also be controlled with vm-browserify
+                - vm2 (node), save eval (browser), 
+                - https://github.com/dfkaye/vm-shim, https://github.com/commenthol/safer-eval#readme
+        - limit access to global variables
+            - universe, thoregon
+            - exchange several API's from window -> proxies with message passing 
+                - localStore
+                - indexDB
+            - proxies for (message passing)
+                - components: specify interface
+                - viewmodels and presenter
+                - event listeners 
+        - a narrow, specialized API to move components in the browser, as well as an API for lifecycle and other important browser events
+        - enables 'simulating' UI components in headless peers
+        - When Workers are available as module (ES5)
             -> SharedWorker - https://developer.mozilla.org/de/docs/Web/API/SharedWorker
             -> WorkerThread - https://nodejs.org/api/worker_threads.html, https://www.heise.de/developer/artikel/Features-von-uebermorgen-Worker-Threads-in-Node-js-4354189.html
+    
+    - Introduce Loader/Component pairs like in java --> coordinate the loaders from universe
+        - support multiple versions of same library 
 
 - plugins for
     - browserloader/universe-service
@@ -75,16 +110,6 @@ ToDo
     - node
     - script
     - introduce .tha ... thoregon archive
-
-- introduce a closed context for each installed component
-    - --> nodeJS: require('vm2'); https://www.heise.de/developer/artikel/JavaScript-Code-dynamisch-zur-Laufzeit-laden-und-ausfuehren-4536862.html?seite=3
-    - --> browser: https://github.com/dfkaye/vm-shim, https://github.com/commenthol/safer-eval#readme
-            - Run in SharedWorker?
-    - no access to global variables except 'universe'
-    - a narrow, specialized API to move components in the browser, as well as an API for lifecycle and other important browser events
-    - enables 'simulating' UI components in headless peers
-
-- Introduce Loader/Component pairs like in java --> coordinate the loaders from universe
      
 - Component Listener for URL's better URI's to watch, find and load components from wherever, also IPFS
     - must be secured with signatures
@@ -95,7 +120,7 @@ ToDo
 - make the dyncomponents itself updatable; enable rollback
 - enable testing: blue/green system, canary
 
-- browser loader plugin for components
+- browser loader plugin for components -> service worker
     - reliant resolver (remote for component resolver)
 - rudimentary pub/sub for boot, then exchange it with the evolux.pubsub component
     - controller requires install of evolux.pubsub, listens on itself when it is installed
