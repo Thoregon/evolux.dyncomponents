@@ -43,7 +43,9 @@ ToDo
                 - https://github.com/dfkaye/vm-shim, https://github.com/commenthol/safer-eval#readme
         - limit access to global variables
             - universe, thoregon
-            - exchange several API's from window -> proxies with message passing 
+            - exchange several API's from window -> proxies with message passing
+                - wrap loaded code
+                    - check if JSON imports can override redefinitions 
                 - localStore
                 - indexDB
             - proxies for (message passing)
