@@ -41,6 +41,11 @@ ToDo
             - additional jail inside iframe? -> don't think so, globals can also be controlled with vm-browserify
                 - vm2 (node), save eval (browser), 
                 - https://github.com/dfkaye/vm-shim, https://github.com/commenthol/safer-eval#readme
+        - disable overriding of methods/properties of global objects
+            - Object.prototype
+            - Object.prototype.constructor
+            - Array.prototype.forEach
+            - ...
         - limit access to global variables
             - universe, thoregon
                 - universe.puls
