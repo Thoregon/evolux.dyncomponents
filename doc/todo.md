@@ -30,23 +30,32 @@ ToDo
         - 
 
 - Firewall/Malware
+    - !aways be aware of insiders
+        - contributor, but works on own account
+        - double agent, is on the payroll of another
+        - review process for sources, especially for basic system  
     - blacklist for address/name
     - size limits
     - plugin API for malware scanners
     - introduce a closed context for each installed component, run in separate context
         - --> nodeJS: require('vm2'); https://www.heise.de/developer/artikel/JavaScript-Code-dynamisch-zur-Laufzeit-laden-und-ausfuehren-4536862.html?seite=3
         - --> browser
-            - !! https://github.com/substack/vm-browserify  https://github.com/browserify/vm-browserify/blob/master/index.js
+            - encapsulate in Worker or iframe
+                - inspired by https://github.com/substack/vm-browserify  https://github.com/browserify/vm-browserify/blob/master/index.js
             - jailed (iframe sandbox) https://github.com/asvd/jailed
             - additional jail inside iframe? -> don't think so, globals can also be controlled with vm-browserify
                 - vm2 (node), save eval (browser), 
                 - https://github.com/dfkaye/vm-shim, https://github.com/commenthol/safer-eval#readme
         - disable overriding of methods/properties of global objects
+            - -> Object.freeze(Object), Object.freeze(Array)
+                - caution: freeze is flat! (does not freeze subobjects) -> 'deepFreeze' https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze 
             - Object.prototype
             - Object.prototype.constructor
             - Array.prototype.forEach
             - ...
+            - polyfills must be requested by a review 
         - limit access to global variables
+            - add a first line to the imported module, redefine all globals as consts (not possible with ES6: wrap all imported modules with a funtion, the globals as parameters) 
             - universe, thoregon
                 - universe.puls
             - exchange several API's from window -> proxies with message passing
@@ -59,6 +68,21 @@ ToDo
                 - components: specify interface
                 - viewmodels and presenter
                 - event listeners 
+            - disable tracking and spying (https://www.heise.de/news/Browser-Ueberwachungskit-fuer-Dutzende-chinesische-Webseiten-entdeckt-6169111.html)
+                - IP Address via WebRTC
+                - cross domain access
+                    - also websockets -> https://hackernoon.com/how-to-steal-secrets-from-developers-using-websockets-dw3p3zgk
+                - fingerprinting
+                - etc
+        - if infected at distribution
+            - how?
+        - replicas of thoregon with malware included (waterhole attacks https://en.wikipedia.org/wiki/Watering_hole_attack)
+            - how?
+            - browser plugin which checks distribution signature
+        - introduce some general APIs for local data storage, very narrow, secure access
+            - BrowserFS
+            - LocalDB
+            - keep in mind, browser only restricts cross domain access. this means apps/components needs their own contexts
         - a narrow, specialized API to move components in the browser, as well as an API for lifecycle and other important browser events
         - enables 'simulating' UI components in headless peers
         - When Workers are available as module (ES5)
