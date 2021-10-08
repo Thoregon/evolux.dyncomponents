@@ -56,7 +56,8 @@ ToDo
             - polyfills must be requested by a review 
         - limit access to global variables
             - add a first line to the imported module, redefine all globals as consts (not possible with ES6: wrap all imported modules with a funtion, the globals as parameters) 
-            - universe, thoregon
+            - universe, thoregon, me, dorifer
+                - wrap 'internal' methods and prevent invocation in app contexts (only system components can access)
                 - universe.puls
             - exchange several API's from window -> proxies with message passing
                 - wrap loaded code
