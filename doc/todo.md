@@ -30,6 +30,8 @@ ToDo
         - 
 
 - Firewall/Malware
+    - introduce SecurityManager with SecurityPolicies like in Java
+        -> https://docs.oracle.com/javase/tutorial/essential/environment/security.html
     - !aways be aware of insiders
         - contributor, but works on own account
         - double agent, is on the payroll of another
