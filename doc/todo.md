@@ -3,6 +3,8 @@ ToDo
 
 - distinguish between
     - component     ... runs in own sandbox context
+        - Workers, communication [SharedArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)
+          - see also [PartyTown](https://partytown.builder.io/)
         - always needs a service 
         - 'component.mjs' in root directory
             - components descriptor
