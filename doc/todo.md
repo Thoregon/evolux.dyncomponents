@@ -43,11 +43,12 @@ ToDo
     - plugin API for malware scanners
     - introduce a closed context for each installed component, run in separate context
         - --> nodeJS: require('vm2'); https://www.heise.de/developer/artikel/JavaScript-Code-dynamisch-zur-Laufzeit-laden-und-ausfuehren-4536862.html?seite=3
+          - isolated VM: https://github.com/laverdet/isolated-vm
         - --> browser
             - encapsulate in Worker or iframe
                 - inspired by https://github.com/substack/vm-browserify  https://github.com/browserify/vm-browserify/blob/master/index.js
             - jailed (iframe sandbox) https://github.com/asvd/jailed
-            - additional jail inside iframe? -> don't think so, globals can also be controlled with vm-browserify
+            - additional jail inside iframe? -> globals can also be controlled with vm-browserify
                 - vm2 (node), save eval (browser), 
                 - https://github.com/dfkaye/vm-shim, https://github.com/commenthol/safer-eval#readme
         - disable overriding of methods/properties of global objects
